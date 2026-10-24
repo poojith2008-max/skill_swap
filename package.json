@@ -1,0 +1,22 @@
+{
+  "name": "skillswap-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SkillSwap - A community skill-exchange marketplace",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "npm run dev --prefix server",
+    "dev:all": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "test": "npm run test --prefix server",
+    "seed": "npm run seed --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
